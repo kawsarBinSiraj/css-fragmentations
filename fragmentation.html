@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="#">
+        <title>fragmentation</title>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <style type="text/css">
+     		
+			.box {
+				max-width: 1100px;
+				border: :1px solid #ddd;
+				padding: 30px;
+				margin:50px auto;
+				font-family: 'Quicksand', sans-serif;
+			}
+
+			h4 {
+			    border: 5px solid red;
+			    padding:  0em 1em;
+			    border-radius: 16px;
+			    font-size: 18px;
+			    line-height: 2;
+			    /* must be use inline if not to be by default inline */
+			    display: inline;
+			}
+
+			h4.ex1 { 
+			    -webkit-box-decoration-break: clone;
+			    -o-box-decoration-break: clone;
+			    box-decoration-break: clone;
+			}
+
+			h4.ex2 { 
+			    -webkit-box-decoration-break: slice;
+			    -o-box-decoration-break: slice;
+			    box-decoration-break: slice;
+			}
+				
+			.brakBox p.orphans {
+				 columns: 4;
+				 widows:4;   /* 
+				              - minimum number of lines in a paragraph split on the new page.
+				              */
+				 orphans: 2; /* 
+				              - minimum number of lines in a paragraph split on the old page. 
+				              */
+			}
+        </style>
+    </head>
+    <body>
+
+	    <div class="box">
+			<h4 class="ex1">box-<br>decoration-<br>break:<br> clone;</h4>
+			<h3><var>box-decoration-break property only for use inline type element.  must be use inline if not to be by default inline</var></h3>	
+			<h4 class="ex2">box-<br>decoration-<br>break: slice;</h4>
+			<!-- Note -->
+			<p><strong>Note:</strong> IE/Edge do not support the box-decoration-break property.</p>
+
+			<h3><var>orphans and widows</var></h3>	
+			<div class="brakBox"> 
+				<p class="orphans"> 
+					if a paragraph can't fit on one page in its entirety it is split wherever it is possible. In this way single lines of a paragraph can appear on page before it continues on the next page. This is usually unwanted, so many word processors require at least two lines to be left on an old page, instead of one. You can give it either a positive number (where 2 is the default) or inherit . Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error consectetur, nisi dolorum reprehenderit. Debitis praesentium, ut officiis, magni nostrum consequuntur pariatur minus fugiat maxime. Magnam modi, ab nemo ipsam illo!
+				</p>
+				<p>
+					In short, in CSS specifically:
+					widows = minimum number of lines in a paragraph split on the new page.
+					orphans = minimum number of lines in a paragraph split on the old page.
+				</p>
+			</div>
+			
+		</div>
+        
+    </body>
+</html>
+
